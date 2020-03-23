@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/response.css">
+</head>
+<body id="wrap">
+    <!-- <div id="wrap"> -->
+        <!-- header -->
+        <header id="header">
+            <div class="container">
+                <a class="logo">
+                        <img src="https://launchpack.co.kr/static/img/logo@3x.fb49d82.png" alt="">
+                </a>
+                <ul class="list-container">
+                    <li>서비스안내</li>
+                    <li class="active">테마</li>
+                    <li>맞춤 제작 신청</li>
+                    <li>고객센터</li>
+                    <li>로그인</li>
+                </ul>
+            </div>
+        </header>
+        
+        <!-- visual -->
+        <section class="visual">
+            <h3 class="blind">Billboard</h3>
+            <div class="pic"></div>
+        </section>
+        <!-- //visual -->
+
+        <!-- container -->
+        <div id="container">
+            <h3 class="blind">SubMenu</h3>
+            <nav>
+                <ul class="clearfix">
+                    <li class="active">전체 테마</li>
+                    <li>로컬 전화연결 테마</li>
+                    <li>매장방문 예약 테마</li>
+                    <li>브랜드상품 링크 테마</li>
+                </ul>
+            </nav>
+            <div class="theme-section">
+                <div class="theme-title">
+                    <h4>전체 테마</h4>
+                    <p>총 4개의 상품이 준비되어 있습니다.</p>
+                </div>
+                <ul class="theme-list clearfix">
+                    <li class="theme-card">
+                        <div class="thumb" style="{backgroundImage:'url(' + themeInfo.thumb + ')'}">
+                            <div class="bg"></div>
+                            계약규정
+                        </div>
+                        <div class="theme-desc">
+                            <div class="clearfix">
+                                <div class="left">
+                                    타이틀
+                                    테마타입
+                                </div>
+                                <div class="right">
+                                    <p>1개 선정</p>
+                                </div>
+                            </div>
+                            <slot name="themeDesc"></slot>
+                            <div class="theme-card-bottom">
+                                <p>
+                                    <slot name="themePrice"></slot>
+                                    <span>원/월</span>
+                                </p>
+                                <router-link :to="`/theme/${themeInfo.id}`">
+                                    <button>상세보기</button>
+                                </router-link>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- aside -->
+        <section class="aside">
+            <div class="aside-left">
+                <h2>원하시는 테마 서비스가 없으신가요?</h2>
+                <p>런치팩은 고객 분들이 원하는 서비스를 런칭할 수 있게 돕기 위해 맞춤제작 서비스를 운영하고 있습니다.</p>
+                <p>원하시는 테마가 없고 좀 더 많은 기능을 원하시는 경우 맞춤제작 서비스를 바로 신청해 보세요!</p>
+                <button>맞춤제작 신청하기</button>
+            </div>
+            <div class="aside-img"></div>
+        </section>
+        <!-- //aside -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="container">
+                <div>
+                    <strong>서비스 이용</strong>
+                    <div>FAQ</div>
+                    <div>새소식</div>
+                    <div>1:1문의</div>
+                </div>
+                <div>
+                    <strong>서비스 정책</strong>
+                    <div>서비스 이용약관</div>
+                    <div>개인정보 보호정책</div>
+                </div>
+                <div>
+                    <strong>제휴</strong>
+                    <div>제휴 제안</div>
+                </div>
+    
+                <div>
+                    <strong>기업정보</strong>
+                    <div>주식회사 런치팩</div>
+                    <div>광주광역시 동구 서남로 14 410호</div>
+                    <div>이메일 : support@launchpack.co.kr</div>
+                    <div>전화 : 1544-9247</div>
+                    <div>사업자등록번호 : 694-87-01163</div>
+                    <div>통신판매업신고 : 제 2018-광주동구-0192 호</div>
+                    <div>대표자 : 염민지 | 개인정보책임자 : 이남호</div>
+                </div>
+            </div>
+        </footer>
+    <!-- </div> -->
+</body>
+</html>

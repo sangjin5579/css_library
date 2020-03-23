@@ -1,0 +1,61 @@
+// .clearfix{
+//     *zoom:1
+// }
+// .clearfix:after{
+//     content:'';
+//     display:block;
+//     clear:both;
+// }
+
+/* 헤더의 세로길이, 전체적인 폰트스타일, 폰트사이즈 선언 */
+body{
+    padding-top:70px;
+    font-family:'Noto Sans Korean',sans-serif;
+    font-size:15px;
+}
+.blind{
+    display:block;
+    position:absolute;
+    left:0;
+    top:-9999em;
+    overflow:hidden;
+}
+.container{
+    /* 반응성 통일너비를 결정합니다. */
+    /* 포지션 relative는 자식요소에  float를 적용하기 위한 설정입니다.*/
+    /* 가운데 정렬은 부모의 width가 100%일 때만 적용됩니다. */
+    position: relative;
+    width:1080px;
+    margin:0 auto;
+}
+.list-container{
+    position: absolute;
+    *zoom:1;
+    /* 아래 속성들은 목적에 맞게 재설정해주세요. */
+    /* width: 580px; */
+    /* top:0;left:0;right:0;bottom:0; */
+}
+.list-container > li{
+    float: left;
+    text-align:center;
+    /* 아래 속성들은 임의의 값이므로, 사용할 때마다 재설정해주세요 */
+    /* width: calc(580px/5);
+    height: 70px;
+    line-height:70px;
+    color:#c3c4c7; */
+}
+.list-container > li:hover{
+    color:#ffffff;
+    cursor:pointer;
+}
+.list-container > li:focus,
+.list-container > li:active,
+.list-container > li.active{
+    font-weight:bold;
+    color:#ffffff;
+}
+.list-container:after{
+    content:'';
+    display:block;
+    clear:both;
+}

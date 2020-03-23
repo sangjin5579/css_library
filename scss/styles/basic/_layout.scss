@@ -1,4 +1,4 @@
-/* 헤더의 세로길이, 전체적인 폰트스타일, 폰트사이즈 선언 */
+
 body{
     padding-top:70px;
     font-family:'Noto Sans Korean',sans-serif;
@@ -11,92 +11,60 @@ body{
     top:-9999em;
     overflow:hidden;
 }
-.container{
-    /* 반응성 통일너비를 결정합니다. */
-    /* 포지션 relative는 자식요소에  float를 적용하기 위한 설정입니다.*/
-    /* 가운데 정렬은 부모의 width가 100%일 때만 적용됩니다. */
-    position: relative;
-    width:1080px;
-    margin:0 auto;
+.clearfix{
+    *zoom:1
 }
-.list-container{
-    position: absolute;
-    *zoom:1;
-    /* 아래 속성들은 목적에 맞게 재설정해주세요. */
-    /* width: 580px; */
-    /* top:0;left:0;right:0;bottom:0; */
-}
-.list-container > li{
-    float: left;
-    text-align:center;
-    /* 아래 속성들은 임의의 값이므로, 사용할 때마다 재설정해주세요 */
-    /* width: calc(580px/5);
-    height: 70px;
-    line-height:70px;
-    color:#c3c4c7; */
-}
-.list-container > li:hover{
-    color:#ffffff;
-    cursor:pointer;
-}
-.list-container > li:focus,
-.list-container > li:active,
-.list-container > li.active{
-    font-weight:bold;
-    color:#ffffff;
-}
-.list-container:after{
+.clearfix:after{
     content:'';
     display:block;
     clear:both;
 }
+
 /* style */
-/* 헤더 */
 #header{
     position:fixed;
     top:0;
-    /* 헤더의 z-index */
     z-index:30;
     width:100%;
-    /* 헤더의 색상 */
     background-color:#393E46;
 }
-#header .container{
-    /* 헤더의 높이를 설정합니다. */
+#header .header-container{
+    position:relative;
+    width:1080px;
     height:70px;
+    margin:0 auto;
 }
-#header .container .logo{
-    display:block;
-    width:145px;
-    height:50px;
+#header .header-container .logo{
     position:absolute;
-    /* 높이를 알 경우 y축 중앙정렬 */
-    top:50%;
-    margin-top:calc(-50px/2);
-    /* 높이를 모를 때 y축 중앙정렬 */
-    /* transform:translateY(-50%); */
+    transform:translateY(50%);
+    width:145px;
 }
-#header .container img{
-    position: absolute; 
-    top:0; left: 0;
-    width: 100%;
-    height: 100%;
+#header .header-container img{
+    width:100%;
 }
-#header .container .list-container{
-    /* position:absolute; */
+#header .header-container .gnb{
+    position:absolute;
     right:0;
     width:580px;
 }
-#header .container .list-container > li{
-    width: calc(580px/5);
-    height: 70px;
+#header .header-container .gnb li{
+    float:left;
+    width:100px;
+    height:70px;
     line-height:70px;
+    text-align:center;
     color:#c3c4c7;
 }
-
-/* --------------------------------------------- */
-
-
+#header .header-container .gnb li:hover{
+    color:#ffffff;
+    cursor:pointer;
+}
+#header .header-container .gnb li:focus,
+#header .header-container .gnb li:active,
+#header .header-container .gnb li.active{
+    font-weight:bold;
+    color:#ffffff;
+}
 .visual{
     width:100%;
     border-bottom: 1px solid #f7f7f7;

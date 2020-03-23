@@ -1,0 +1,55 @@
+// <header id="header">
+//     <div class="container">
+//         <a class="logo">
+//                 <img src="" alt="">
+//         </a>
+//         <ul class="list-container">
+//             <li>서비스안내</li>
+//             <li class="active">테마</li>
+//             <li>맞춤 제작 신청</li>
+//             <li>고객센터</li>
+//             <li>로그인</li>
+//         </ul>
+//     </div>
+// </header>
+
+#header{
+    position:fixed;
+    top:0;
+    /* 헤더의 z-index */
+    z-index:30;
+    width:100%;
+    /* 헤더의 색상 */
+    background-color:#393E46;
+}
+#header .container{
+    /* 헤더의 높이를 설정합니다. */
+    height:70px;
+}
+#header .container .logo{
+    display:block;
+    width:145px;
+    height:50px;
+    position:absolute;
+    /* 높이를 알 경우 y축 중앙정렬 */
+    top:50%;
+    margin-top:calc(-50px/2);
+    /* 높이를 모를 때 y축 중앙정렬 */
+    /* transform:translateY(-50%); */
+}
+#header .container .logo img{
+    position: absolute; 
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+#header .container .list-container{
+    right:0;
+    width:580px;
+}
+#header .container .list-container > li{
+    width: calc(580px/5);
+    height: 70px;
+    line-height:70px;
+    color:#c3c4c7;
+}
