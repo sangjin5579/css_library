@@ -1,0 +1,53 @@
+//메인 컨텐츠 영역
+// <div id="container">
+//     <div class="side-menu">
+//         <div class="container">
+//             <ul class="list-container">
+//                 <li class="active li">전체 테마</li>
+//                 <li class="li">로컬 전화연결 테마</li>
+//                 <li class="li">매장방문 예약 테마</li>
+//                 <li class="li">브랜드상품 링크 테마</li>
+//             </ul>
+//         </div>
+//     </div>
+// </div>
+#container{
+    background-color: #f7f7f7;
+}
+#container .side-menu{
+    width:100%;
+    background-color: #ffffff;
+}
+#container .side-menu .container{
+    height:50px;
+}
+#container .side-menu .list-container{
+    width:100%;
+}
+#container .side-menu .list-container > .li{
+    /* float:left; */
+    padding:0 10px 3px 10px;
+    width:auto;
+    height:47px;
+    line-height:50px;
+    color:#606060;
+}
+#container .side-menu .list-container > .li:hover{
+    font-weight:bold;
+    cursor:pointer;
+}
+#container .side-menu .list-container > .li:active,
+#container .side-menu .list-container > .li:focus{
+    height:47px;
+    padding:0 10px;
+    font-weight:bold;
+    color:#000000;
+    border-bottom:3px solid #FF6600;
+}
+#container .side-menu .list-container > .li.active{
+    height:47px;
+    padding:0 10px;
+    font-weight:bold;
+    color:#000000;
+    border-bottom:3px solid #FF6600;
+}

@@ -1,0 +1,21 @@
+// 스피너 및 이미지 레이아웃 설정.
+// <section class="visual">
+    // <h3 class="blind">Billboard</h3>
+    // <div class="pic"></div>
+// </section>
+.visual{
+    width:100%;
+    border-bottom: 1px solid #f7f7f7;
+}
+.visual .pic{
+    //이미지의 크기 그대로 적용됩니다.
+    background-image: url(https://helpx.adobe.com/content/dam/help/ko/photoshop/how-to/compositing/_jcr_content/main-pars/image/compositing_1408x792.jpg);
+    //이미지의 비율을 유지하여 컨테이너 크기를 채우도록 확장합니다.
+    background-size: cover;
+    //초기 이미지보다 컨테이너가 크다면 반복되어 표시되므로 반복취소설정을 해줍니다.
+    background-repeat: no-repeat;
+    //공백에 대하여 %만큼 이동 합니다.
+    background-position-x: 50%;
+    background-position-y: 50%;
+    height:250px;
+}

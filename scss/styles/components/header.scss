@@ -44,10 +44,12 @@
     height: 100%;
 }
 #header .container .list-container{
+    // 반응형 범위에서의 정렬기준입니다.
     right:0;
     width:580px;
 }
-#header .container .list-container > li{
+#header .container .list-container > .li{
+    // 리스트 각각의 속성을 정의합니다.
     width: calc(580px/5);
     height: 70px;
     line-height:70px;

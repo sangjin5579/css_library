@@ -3,6 +3,11 @@ body{
     padding-top:70px;
     font-family:'Noto Sans Korean',sans-serif;
     font-size:15px;
+    border: 1px solid red;
+}
+.section{
+    width:100%;
+    background-color: #A0A0A0;
 }
 .blind{
     display:block;
@@ -26,22 +31,22 @@ body{
     /* width: 580px; */
     /* top:0;left:0;right:0;bottom:0; */
 }
-.list-container > li{
+.list-container > .li{
     float: left;
     text-align:center;
     /* 아래 속성들은 임의의 값이므로, 사용할 때마다 재설정해주세요 */
     /* width: calc(580px/5);
     height: 70px;
-    line-height:70px;
-    color:#c3c4c7; */
+    line-height:70px;*/
+    color:#c3c4c7; 
 }
-.list-container > li:hover{
+.list-container > .li:hover{
     color:#ffffff;
     cursor:pointer;
 }
-.list-container > li:focus,
-.list-container > li:active,
-.list-container > li.active{
+.list-container > .li:focus,
+.list-container > .li:active,
+.list-container > .li.active{
     font-weight:bold;
     color:#ffffff;
 }
@@ -91,65 +96,65 @@ body{
     width: calc(580px/5);
     height: 70px;
     line-height:70px;
-    color:#c3c4c7;
 }
-
-/* --------------------------------------------- */
-
 
 .visual{
     width:100%;
     border-bottom: 1px solid #f7f7f7;
-    overflow: hidden;
 }
 .visual .pic{
-    background-image: url(https://launchpack.co.kr/static/img/img_banner_beta.png);
+    background-image: url(https://helpx.adobe.com/content/dam/help/ko/photoshop/how-to/compositing/_jcr_content/main-pars/image/compositing_1408x792.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 50%;
-    height:250px;
+    background-position-y: 50%;
+    height:500px;
 }
 #container{
     background-color: #f7f7f7;
 }
-#container nav{
-    position:relative;
-    width:1080px;
-    height:50px;
-    margin:0 auto;
+#container .side-menu{
+    width:100%;
     background-color: #ffffff;
 }
-#container nav ul{
-    position: absolute;
+#container .side-menu .container{
+    height:50px;
+}
+#container .side-menu .list-container{
+    /* position: absolute; */
     width:100%;
 }
-#container nav ul li{
-    float:left;
+#container .side-menu .list-container > .li{
+    /* float:left; */
     padding:0 10px 3px 10px;
     width:auto;
     height:47px;
     line-height:50px;
     color:#606060;
 }
-#container nav ul li:hover{
+#container .side-menu .list-container > .li:hover{
     font-weight:bold;
     cursor:pointer;
 }
-#container nav ul li:active,
-#container nav ul li:focus{
+#container .side-menu .list-container > .li:active,
+#container .side-menu .list-container > .li:focus{
     height:47px;
     padding:0 10px;
     font-weight:bold;
     color:#000000;
     border-bottom:3px solid #FF6600;
 }
-#container nav ul li.active{
+#container .side-menu .list-container > .li.active{
     height:47px;
     padding:0 10px;
     font-weight:bold;
     color:#000000;
     border-bottom:3px solid #FF6600;
 }
+
+
+/* ---------------보류---------------- */
+
 #container .theme-section{
     width:1080px;
     margin:0 auto;
@@ -265,6 +270,9 @@ li .theme-card .theme-desc .theme-card-bottom button{
     color:#ffffff;
     cursor: pointer;
 }
+
+/* aside남음---------------------- */
+
 .aside{
     display:flex;
     flex-direction: row;
@@ -309,22 +317,22 @@ footer{
     color:#ffffff;
 }
 footer .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:1080px;
     height:300px;
-    margin:0 auto;
     padding: 40px 0;
+}
+footer .container .list-container{
+    width:100%;
+}
+footer .list-container > .li{
+    width: calc(1080px/4);
+    height: 300px;
+    padding:5px 0;
+    font-size:13px;
+    color:#ffffff;
 }
 footer .container > div strong{
     display:block;
     margin-bottom:20px;
     font-size:15px;
     color:#a0a0a0;
-}
-footer .container > div > div{
-    padding:5px 0;
-    font-size:13px;
-    color:#ffffff;
 }
